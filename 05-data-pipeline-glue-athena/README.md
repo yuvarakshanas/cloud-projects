@@ -21,7 +21,7 @@ This is a perfect first data engineering project on AWS.
 
 ## 🏗 Architecture Diagram (ASCII)
 
-```
+```flow
 CSV Files (Local)
       |
       v

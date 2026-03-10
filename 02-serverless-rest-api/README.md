@@ -25,8 +25,7 @@ This project is perfect for beginners learning **cloud backend development**.
 
 # 🏗 Architecture Diagram
 
-```
-
+```flow
 Client (Browser / Postman)
 |
 v
@@ -37,9 +36,7 @@ AWS Lambda Function
 |
 v
 (Optional) Amazon DynamoDB
-
-```
-
+````
 ---
 
 # 🧰 AWS Services Used
@@ -103,10 +100,10 @@ Follow the steps below to deploy the **Serverless REST API using AWS Lambda and 
 
 Configuration:
 
-```
+```json
 Function Name: hello-api
 Runtime: Python 3.x
-```
+````
 
 5. Click **Create Function**
 6. Paste the **sample Lambda code**
@@ -131,10 +128,10 @@ Click **Create Resource**
 
 Configuration:
 
-```
+```text
 Resource Name: hello
 Resource Path: /hello
-```
+````
 
 Click **Create Resource**
 
@@ -148,10 +145,10 @@ Click **Create Resource**
 
 Integration settings:
 
-```
+``` text
 Integration Type: Lambda Function
 Lambda Function: hello-api
-```
+````
 
 Click **Save**
 
@@ -164,9 +161,9 @@ Click **Save**
 
 Create a new stage:
 
-```
+```text
 Stage Name: prod
-```
+````
 
 Click **Deploy**
 
@@ -178,9 +175,9 @@ After deployment, API Gateway will generate an **Invoke URL**.
 
 Example:
 
-```
+```text
 https://abc123.execute-api.region.amazonaws.com/prod/hello
-```
+````
 
 ---
 
@@ -190,9 +187,9 @@ https://abc123.execute-api.region.amazonaws.com/prod/hello
 
 Paste the invoke URL:
 
-```
+```text
 https://abc123.execute-api.region.amazonaws.com/prod/hello
-```
+````
 
 ---
 
@@ -200,15 +197,15 @@ https://abc123.execute-api.region.amazonaws.com/prod/hello
 
 Method:
 
-```
+```text
 GET
-```
+````
 
 URL:
 
-```
+```text
 https://abc123.execute-api.region.amazonaws.com/prod/hello
-```
+````
 
 ---
 
@@ -216,7 +213,7 @@ https://abc123.execute-api.region.amazonaws.com/prod/hello
 
 ```bash
 curl https://abc123.execute-api.region.amazonaws.com/prod/hello
-```
+````
 
 ---
 
@@ -226,7 +223,7 @@ curl https://abc123.execute-api.region.amazonaws.com/prod/hello
 {
   "message": "Hello from AWS Lambda!"
 }
-```
+````
 
 ---
 

@@ -29,7 +29,7 @@ This is a perfect introduction to AI/ML services on AWS.
 
 ## 🏗 Architecture Diagram (ASCII)
 
-```
+```flow
 User Uploads Image
         |
         v
@@ -69,41 +69,7 @@ CloudWatch Logs / API Response
 
 # 🧩 Sample Lambda Code (Included in Repo)
 
-## **Option 1: Node.js (index.js)**
-
-```javascript
-const AWS = require("aws-sdk");
-const rekognition = new AWS.Rekognition();
-
-exports.handler = async (event) => {
-    const bucket = event.Records[0].s3.bucket.name;
-    const key = event.Records[0].s3.object.key;
-
-    const params = {
-        Image: {
-            S3Object: {
-                Bucket: bucket,
-                Name: key
-            }
-        },
-        MaxLabels: 10,
-        MinConfidence: 70
-    };
-
-    const result = await rekognition.detectLabels(params).promise();
-
-    console.log("Detected Labels:", JSON.stringify(result.Labels, null, 2));
-
-    return {
-        statusCode: 200,
-        body: JSON.stringify(result.Labels)
-    };
-};
-```
-
----
-
-## **Option 2: Python (index.py)**
+## Python (index.py)**
 
 ```python
 import json
