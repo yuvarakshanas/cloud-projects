@@ -1,4 +1,3 @@
-```md
 # 📊 Simple Data Pipeline Using S3, AWS Glue, and Amazon Athena
 
 A beginner-friendly AWS data engineering project where you build a simple **serverless data pipeline** using **Amazon S3**, **AWS Glue**, and **Amazon Athena**.  
