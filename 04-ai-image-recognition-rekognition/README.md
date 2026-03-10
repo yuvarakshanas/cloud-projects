@@ -1,5 +1,3 @@
-# **`04-ai-image-recognition-rekognition/README.md`**
-
 # 🤖 AI Image Recognition App Using AWS Rekognition
 
 A beginner-friendly AWS project where you build an image recognition system using **Amazon Rekognition**.  
